@@ -7,7 +7,8 @@ current_directory = os.getcwd()
 
 #Leer modelo
 model = torch.hub.load('ultralytics/yolov5', 'custom', path=f'{current_directory}/APRENDE E INGENIA/CREACION DE DATA SET/project/models/best.pt')
-print(model)
+
+#model = torch.hub.load('ultralytics/yolov5', 'custom', path=f'{current_directory}/APRENDE E INGENIA/CREACION DE DATA SET/project/models/last.pt')
 
 cap = cv2.VideoCapture(0)
 
