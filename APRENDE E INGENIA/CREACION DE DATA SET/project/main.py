@@ -2,6 +2,7 @@ import torch
 import cv2
 import os
 import numpy as np
+import pandas
 
 current_directory = os.getcwd()
 
@@ -15,6 +16,10 @@ cap = cv2.VideoCapture(0)
 while True:
     #Lectura de frames
     ret, frame = cap.read()
+    
+    # Guardar la informacion del objeto
+    info = detect.pandas().xyxy[0]
+    print(info)
     
     #realizar deteccciones
     detect = model(frame)
